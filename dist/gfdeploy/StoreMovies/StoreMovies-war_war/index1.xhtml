@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/css/style.css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h:form class="form">
+                <div class="basket">
+                
+                </div>
+                <div class="search-box">
+                    <h:selectOneMenu class="category-list" value="#{categories.selectedCategory}">
+                        <f:selectItems class="category-list__item" value="#{categories.categoriesItems.entrySet()}" var="category" itemValue="#{category.key}" itemLabel="#{category.value}"></f:selectItems>
+                    </h:selectOneMenu>
+                    <h:commandButton class="button is-primary" value="Szukaj" action="#{categories.whichSelectedItem()}"></h:commandButton>
+                </div>
+                <ul class="films">
+                    <ui:repeat value="#{storeMoviesList.moviesList}" var="movie">
+                        <li class="film">
+                            <div class="">
+                                <div>
+                                    <span>
+                                        <h:outputText value="#{movie.getMId()} "></h:outputText>
+                                        <h:outputText value="#{movie.getMTitle()}">
+                                            <f:param name="id" value="#{movie.getMId()}"></f:param>
+                                        </h:outputText>
+                                    </span>
+                                    <span>
+                                        (
+                                        <h:outputText value="#{movie.getMCategory()}"></h:outputText>
+                                        )
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>(<h:outputText value="#{movie.getMYear()}"></h:outputText>)</span>
+                                    <span>reż. <h:outputText value="#{movie.getMDirector()}"></h:outputText></span>
+                                    <span>występują <h:outputText value="#{movie.getMCast()}"></h:outputText></span>
+                                    <h:link value=" Szczegóły" class="more-details"></h:link>
+                                </div>
+                                <div>
+                                    <h:link class="add-to-basket" onclick="">
+                                        <i class="material-icons">add_shopping_cart</i>
+                                    </h:link>
+                                    <h:outputText value=" #{movie.getMPrice()} pln"></h:outputText>
+                                </div>
+                            </div>
+                        </li>
+                    </ui:repeat>
+                </ul>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

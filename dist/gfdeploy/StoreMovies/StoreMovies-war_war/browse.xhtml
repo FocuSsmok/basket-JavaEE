@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <link rel="stylesheet" href="resources/css/browse.css"/>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div>
+            <div>
+                <div><span class="feature__title">ID: </span><span>#{storeMoviesList.current.MId}</span></div>
+                <div><span class="feature__title">Tytuł: </span><span>#{storeMoviesList.current.MTitle}</span></div>
+                <div><span class="feature__title">Kategoria: </span><span>#{storeMoviesList.current.MCategory}</span></div>
+                <div><span class="feature__title">Rok Wydania: </span><span>#{storeMoviesList.current.MYear}</span></div>
+                <div><span class="feature__title">Reżyser: </span><span>#{storeMoviesList.current.MDirector}</span></div>
+                <div><span class="feature__title">Występują: </span><span>#{storeMoviesList.current.MCast}</span></div>
+                <div><span class="feature__title">Opis: </span><span>#{storeMoviesList.current.MStory}</span></div>
+                <div><span class="feature__title">Cena: </span><span>#{storeMoviesList.current.MPrice} PLN</span></div>
+                <div class="back-wrap"><h:form><h:commandLink class="back" action="#{storeMoviesList.backToMainPage()}" value="Powrót"></h:commandLink></h:form></div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

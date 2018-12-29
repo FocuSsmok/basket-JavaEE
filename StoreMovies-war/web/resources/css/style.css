@@ -1,0 +1,156 @@
+:root {
+    /*--primary-color: #f7fff7; --white*/ 
+    /*--secondary-color: #ff6b6b; --pink*/
+    /*--third-color: #4ecdc4; --light blue*/
+    /*--fourth-color: #ffe66d; --yellow*/
+    /*--fifth-color: #1a535c; --dark blue*/
+}
+
+/*
+    --bgc-color: #4a4e69
+    --text-color: #f2e9e4
+    --silver: #c9ada7
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4a4e69;
+}
+
+.container {
+    color: #f2e9e4;
+}
+
+.movie-wrapper {
+    border: 1px solid #9a8c98;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.form {
+    padding: 40px;
+}
+
+.arrow {
+    color: #1a535c;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.category-list, .category-list__item {
+    font-size: 1rem;
+    padding: .32rem;
+    max-height: 50px;
+    background-color: #f7fff7;
+    cursor: pointer;
+}
+
+.category-list {
+    border-radius: 5px;
+}
+
+.button.is-primary {
+    font-size: 1rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+.film {
+    padding-bottom: 20px;
+}
+
+.add-to-basket {
+    display: inline-flex;
+    vertical-align: top;
+    color: #4a4e69;
+    background-color: #c9ada7;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+
+.add-to-basket i {
+    font-size: 20px;
+}
+
+.add-to-basket:hover {
+    color: #f2e9e4;
+}
+
+.view-more {
+    color: #c9ada7;
+    transition: all .3s linear;
+}
+
+.view-more:hover {
+    color: #9a8c98;
+}
+
+.form::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.basket {
+    width: 40%;
+    float: left;
+    padding-right: 40px;
+}
+
+.movies-container {
+    width: 60%;
+    float: left;
+}
+
+.table tr {
+    background: #f2e9e4;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background: #E1CDC2;
+}
+
+.basket table tr td{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.table th {
+    text-align: center;
+}
+
+.table-basket {
+    width: 100%;
+}
+
+.basket-item--index {
+    width: 10%;
+}
+
+.basket-item--title {
+    width: 50%;
+}
+
+.basket-item--price, .basket-item--remove {
+    width: 20%;
+}
+
+.basket-footer__field {
+    display: inline-block;
+    padding-right: 10px;
+    width: 40%;
+    font-weight: bold;
+}
